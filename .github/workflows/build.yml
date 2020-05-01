@@ -34,7 +34,7 @@ jobs:
 
       - name: Build go-github-repos file and package
         run: |
-          cd $GOPATH/$REPO_URL
+          cd $GOPATH/src/$REPO_URL
           make build && make package
           mkdir -p ./publish
           mv go-github-repos.alfredworkflow ./publish
