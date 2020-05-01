@@ -28,7 +28,7 @@ jobs:
           echo "::add-path::$(dirname $GITHUB_WORKSPACE)/bin"
         shell: bash
 
-      - name: Get geosite code
+      - name: Get alfred-github-jump code
         run: |
           go get -u -v -d -insecure $REPO_URL
 
@@ -37,7 +37,7 @@ jobs:
           cd $GOPATH/src/$REPO_URL
           make build && make package
           mkdir -p ./publish
-          mv go-github-repos.alfredworkflow ./publish
+          cp -fv go-github-repos.alfredworkflow ./publish
           make clean
 
       - name: Release file
