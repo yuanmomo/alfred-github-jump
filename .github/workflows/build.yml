@@ -44,4 +44,4 @@ jobs:
         uses: yuanmomo/action-release@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ASSET_PATH: publish
+          ASSET_PATH: $GOPATH/src/$REPO_URL/publish
