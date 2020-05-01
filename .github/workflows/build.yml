@@ -34,15 +34,15 @@ jobs:
 
       - name: Build go-github-repos file and package
         run: |
-          cd $GOPATH/src/$REPO_URL
-          make build && make package
-          mkdir -p ./publish
-          cp -fv go-github-repos.alfredworkflow ./publish
-          make clean
-          ls -al $GOPATH/src/$REPO_URL/publish
+          current_dir=$(pwd)
+          echo "current_dir : ${current_dir}"
+          cd $GOPATH/src/$REPO_URL && make build && make package
+
+          mkdir -p ${current_dir}/publish
+          cp -fv go-github-repos.alfredworkflow ${current_dir}/publish
 
       - name: Release file
         uses: yuanmomo/action-release@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ASSET_PATH: $GOPATH/src/$REPO_URL/publish
+          ASSET_PATH: publish
