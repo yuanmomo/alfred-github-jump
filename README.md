@@ -1,21 +1,22 @@
 # Alfred Github Jump
 
-A [workflow for Alfred 3](https://www.alfredapp.com/help/workflows/) for indexing your github repositories, allowing you to quickly filter them and open them in your default browser
+A [workflow for Alfred 3](https://www.alfredapp.com/help/workflows/) implement in Golang for indexing your github repositories, allowing you to quickly filter them and open them in your default browser
 
-![](http://lachlan.me/s/wvjHZ.png)
+## Usage
+[Click to here](https://github.com/yuanmomo/alfred-github-jump/releases) and download latest alfred workflow. Double click to install when downloaded .
+
+* Call Alfred, and use gh-login to login Github.
+![alfred-login-github](https://img.tupm.net/2020/05/48BDE8584A746E8F517E1C46139F801E.jpg)
+
+* Use gh-update to make a cache of the repos.
+![alfred-update-github](https://img.tupm.net/2020/05/189F981CB87BA04166DA9362314BD9C9.jpg)
 
 
-## Development
+* Wait for the notification, then use gh to search repos.
+![alfred-search-github](https://img.tupm.net/2020/05/F0015830A1772EE0F00E99E5E30CB317.jpg)
 
-```bash
-# Make sure the workflow dir exists
-mkdir -p "$HOME/Library/Application Support/Alfred 3/Alfred.alfredpreferences/workflows"
 
-# Then checkout the project
-go get -u github.com/lox/go-github-repos
-cd "$GOPATH/src/github.com/lox/go-github-repos"
 
-# Build it and link it into Alfred
-make build
-ln -s "$PWD" "$HOME/Library/Application Support/Alfred 3/Alfred.alfredpreferences/workflows/go-github-repos"
-```
+## Thanks 
+
+[https://github.com/lox/alfred-github-jump](https://github.com/lox/alfred-github-jump)
