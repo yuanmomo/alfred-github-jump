@@ -1,4 +1,4 @@
-module github.com/lox/alfred-github-jump
+module github.com/yuanmomo/go-github-repos
 
 go 1.13
 
@@ -8,6 +8,7 @@ require (
 	github.com/golang/protobuf v1.2.0 // indirect
 	github.com/google/go-github v17.0.1-0.20180816111355-fc33ffe77374+incompatible
 	github.com/google/go-querystring v0.0.0-20170111101155-53e6ce116135 // indirect
+	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/mattn/go-sqlite3 v1.9.1-0.20180719091609-b3511bfdd742
 	github.com/pascalw/go-alfred v0.0.0-20160913054623-16aeb807166c
 	github.com/sahilm/fuzzy v0.1.0

@@ -1,0 +1,46 @@
+name: Build alfred-github-jump
+on:
+  schedule:
+    - cron: "0 0 * * 3"
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Setup Go 1.13
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.13
+        id: go
+
+      - name: Set $GOPATH and more variables
+        run: |
+          echo "::set-env name=NAME::$(date +%Y%m%d%H%M)"
+          echo "::set-env name=TAG_NAME::$(date +%Y%m%d%H%M)"
+          echo "::set-env name=GOPATH::$(dirname $GITHUB_WORKSPACE)"
+          echo "::set-env name=REPO_URL::github.com/yuanmomo/alfred-github-jump"
+          echo "::add-path::$(dirname $GITHUB_WORKSPACE)/bin"
+        shell: bash
+
+      - name: Get geosite code
+        run: |
+          go get -u -v -d -insecure $REPO_URL
+
+      - name: Build go-github-repos file and package
+        run: |
+          make build && make package
+          mkdir -p ./publish
+          mv go-github-repos.alfredworkflow ./publish
+          make clean
+
+      - name: Release file
+        uses: yuanmomo/action-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ASSET_PATH: publish

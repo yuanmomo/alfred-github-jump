@@ -1,4 +1,4 @@
 *.json
-alfred-github-jump
+go-github-repos
 sqlite.db
 *.alfredworkflow

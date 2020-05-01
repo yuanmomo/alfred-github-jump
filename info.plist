@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>me.lachlan.githubjump</string>
+	<string>net.yuanmomo.util.github</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
@@ -67,13 +67,13 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Lachlan Donald</string>
+	<string>yuanmomo</string>
 	<key>description</key>
 	<string>Search / Open Recent Github Repos</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Github Jump</string>
+	<string>go-github-repos</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -113,7 +113,7 @@
 				<key>runningsubtext</key>
 				<string>Loading github repositories</string>
 				<key>script</key>
-				<string>./alfred-github-jump repos "{query}"</string>
+				<string>./go-github-repos repos "{query}"</string>
 				<key>title</key>
 				<string>Jump to a Github Repository</string>
 				<key>type</key>
@@ -144,7 +144,7 @@
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>Github Jump</string>
+				<string>go-github-repos</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -161,7 +161,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./alfred-github-jump update</string>
+				<string>./go-github-repos update</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -180,7 +180,7 @@
 				<key>keyword</key>
 				<string>gh &gt; update</string>
 				<key>subtext</key>
-				<string>Github Jump</string>
+				<string>go-github-repos</string>
 				<key>text</key>
 				<string>Update Github Repositories</string>
 				<key>withspace</key>
@@ -201,7 +201,7 @@
 				<key>keyword</key>
 				<string>gh &gt; login</string>
 				<key>subtext</key>
-				<string>Github Jump</string>
+				<string>go-github-repos</string>
 				<key>text</key>
 				<string>Login to Github</string>
 				<key>withspace</key>
@@ -222,7 +222,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./alfred-github-jump login</string>
+				<string>./go-github-repos login</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -275,6 +275,6 @@
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string>https://github.com/lox</string>
+	<string>https://github.com/yuanmomo</string>
 </dict>
 </plist>

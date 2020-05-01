@@ -1,16 +1,17 @@
 SOURCES := $(wildcard *.go)
-BIN := alfred-github-jump
+BIN := go-github-repos
 FILES := $(BIN) info.plist icon.png
 
-build: alfred-github-jump
+build: go-github-repos
 
-package: Github\ Jump.alfredworkflow
+package: go-github-repos.alfredworkflow
 
-Github\ Jump.alfredworkflow: $(FILES)
+go-github-repos.alfredworkflow: $(FILES)
 	zip -j "$@" $^
 
-alfred-github-jump: $(SOURCES)
-	CGO_ENABLED=1 go build -ldflags="-s -w" -o alfred-github-jump $(SOURCES)
+go-github-repos: $(SOURCES)
+	CGO_ENABLED=1 go build -ldflags="-s -w" -o $(BIN) $(SOURCES)
+	upx --best $(BIN)
 
 clean:
-	-rm $(BIN) Github\ Jump.alfredworkflow
+	-rm $(BIN) go-github-repos.alfredworkflow
