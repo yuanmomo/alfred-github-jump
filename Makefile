@@ -10,7 +10,7 @@ go-github-repos.alfredworkflow: $(FILES)
 	zip -j "$@" $^
 
 go-github-repos: $(SOURCES)
-	CGO_ENABLED=1 GOOS=darwin GOARCH=amd64 go build -ldflags="-s -w" -o $(BIN) $(SOURCES)
+	env CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags="-s -w" -o $(BIN) $(SOURCES)
 	upx --best $(BIN)
 
 clean:
