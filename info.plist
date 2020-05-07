@@ -178,7 +178,7 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>gh &gt; update</string>
+				<string>gh-update</string>
 				<key>subtext</key>
 				<string>go-github-repos</string>
 				<key>text</key>
@@ -199,7 +199,7 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>gh &gt; login</string>
+				<string>gh-login</string>
 				<key>subtext</key>
 				<string>go-github-repos</string>
 				<key>text</key>
