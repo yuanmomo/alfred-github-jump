@@ -3,7 +3,7 @@
 A [workflow for Alfred 3](https://www.alfredapp.com/help/workflows/) implement in Golang for indexing your github repositories, allowing you to quickly filter them and open them in your default browser
 
 ## Usage
-[Click to here](https://github.com/yuanmomo/alfred-github-jump/releases) and download latest alfred workflow. Double click to install when downloaded .
+[Click to here](https://raw.githubusercontent.com/yuanmomo/alfred-github-jump/master/go-github-repos.alfredworkflow) to download latest alfred workflow. Double click to install when downloaded .
 
 ### gh-login
 Call Alfred, and use gh-login to login Github.<br />
